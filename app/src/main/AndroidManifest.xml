@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.liron.ots">
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-feature android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application
+        android:name=".analytic.AnalyticsApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/otc_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.parse.APPLICATION_ID"
+            android:value="re7isVtpOsA6VDfv8vtwCo50F6Ol726QdRcMgFfp" />
+        <meta-data
+            android:name="com.parse.CLIENT_KEY"
+            android:value="HL6WTJMEENNef0hfIOTOB5puctb0LfWF4xRlU5B3" />
+
+        <activity
+            android:name=".users.LoginActivity"
+            android:label="@string/title_activity_login" />
+        <activity
+            android:name=".users.SignUpActivity"
+            android:label="@string/title_activity_sign_up" />
+        <activity
+            android:name=".CreateTeamActivity"
+            android:label="@string/title_activity_create_team" />
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/settings"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".UserTasksActivity"
+            android:label="UserTasksActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name=".SaveTaskActivity"
+            android:parentActivityName=".MainActivity"
+            android:label="@string/title_activity_create_edit_task"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity android:name=".EditTeamMemberActivity" />
+        <activity android:name=".WelcomeActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/task_manager"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SaveMemberTaskActivity"
+            android:label="@string/title_activity_save_member_task"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <receiver android:name=".CheckTasksBroadCastReceiver">
+            <intent-filter>
+                <action android:name="ots.tasks_check_broadcast" />
+            </intent-filter>
+        </receiver>
+        <!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+             App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+    </application>
+
+</manifest>

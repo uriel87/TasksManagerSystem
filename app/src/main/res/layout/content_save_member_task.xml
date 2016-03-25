@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="50dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".SaveMemberTaskActivity"
+    tools:showIn="@layout/activity_save_member_task"
+    android:paddingEnd="20dp">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:text="@string/member_category"
+        android:textAppearance="@android:style/TextAppearance.Holo.Medium"/>
+
+    <TextView
+        android:id="@+id/m_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="left"
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="3dp"
+        android:text="New Text"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:text="@string/member_priority"
+        android:textAppearance="@android:style/TextAppearance.Holo.Medium"/>
+
+    <TextView
+        android:id="@+id/m_priority"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="left"
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="3dp"
+        android:text="New Text"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:text="@string/member_location"
+        android:textAppearance="@android:style/TextAppearance.Holo.Medium"/>
+
+    <TextView
+        android:id="@+id/m_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="left"
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="3dp"
+        android:text="New Text"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:text="@string/member_due_time"
+        android:textAppearance="@android:style/TextAppearance.Holo.Medium"/>
+
+    <TextView
+        android:id="@+id/m_duetime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="left"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="3dp"
+        android:text="New Text"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:text="@string/member_accept"
+        android:textAppearance="@android:style/TextAppearance.Holo.Medium"/>
+
+    <RadioGroup
+        android:id="@+id/status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/acceptStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rbtn_selector"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Accept"
+            android:textColor="@drawable/rbtn_textcolor_selector"
+            android:textSize="10dp"/>
+
+        <RadioButton
+            android:id="@+id/rejectStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rbtn_selector"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Reject"
+            android:textColor="@drawable/rbtn_textcolor_selector"
+            android:textSize="10dp"/>
+
+        <RadioButton
+            android:id="@+id/waitingStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rbtn_selector"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Waiting"
+            android:textColor="@drawable/rbtn_textcolor_selector"
+            android:textSize="10dp"/>
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/taskStatusLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="@string/member_progress"
+            android:textAppearance="@android:style/TextAppearance.Holo.Medium"/>
+
+        <RadioGroup
+            android:id="@+id/taskStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/taskDoneStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/rbtn_selector"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Done"
+                android:textColor="@drawable/rbtn_textcolor_selector"
+                android:textSize="10dp"/>
+
+            <RadioButton
+                android:id="@+id/taskProgressStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/rbtn_selector"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="In Progress"
+                android:textColor="@drawable/rbtn_textcolor_selector"
+                android:textSize="10dp"/>
+
+            <RadioButton
+                android:id="@+id/taskWaitingStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/rbtn_selector"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Waiting"
+                android:textColor="@drawable/rbtn_textcolor_selector"
+                android:textSize="10dp"/>
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/addPhotoLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:onClick="onAddPhotoClick"
+                android:text="@string/camera_btn"/>
+
+            <ImageView
+                android:id="@+id/taskImage"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/icon"
+                android:layout_marginTop="5dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:onClick="onSaveMemberTaskClick"
+        android:text="@string/task_editor_btn"
+        android:layout_marginTop="5dp" />
+
+</LinearLayout>
+</ScrollView>
